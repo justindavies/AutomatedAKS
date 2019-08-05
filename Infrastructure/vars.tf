@@ -1,0 +1,2 @@
+variable "SP" {}
+variable "PASS" {}
