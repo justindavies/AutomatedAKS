@@ -26,8 +26,8 @@ resource "azurerm_kubernetes_cluster" "test" {
   }
 
   service_principal {
-    client_id     = "00000000-0000-0000-0000-000000000000"
-    client_secret = "00000000000000000000000000000000"
+    client_id     = var.SP
+    client_secret = var.PASS
   }
 
   tags = {
