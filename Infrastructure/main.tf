@@ -25,6 +25,10 @@ resource "azurerm_kubernetes_cluster" "test" {
     os_disk_size_gb = 30
   }
 
+  service_principal {
+    client_id     = "00000000-0000-0000-0000-000000000000"
+    client_secret = "00000000000000000000000000000000"
+  }
 
   tags = {
     Environment = "Production"
