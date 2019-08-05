@@ -1,10 +1,6 @@
-variable "SP" {
-  default = "us-east-1"
-}
+variable "SP" {}
+variable "PASS" {}
 
-variable "PASS" {
-  default = "us-east-1"
-}
 
 resource "azurerm_resource_group" "test" {
   name     = "acctestRG1"
@@ -34,8 +30,8 @@ resource "azurerm_kubernetes_cluster" "test" {
   }
 
   service_principal {
-    client_id     = var.SP
-    client_secret = var.PASS
+    client_id     = ${var.SP}
+    client_secret = ${var.PASS}
   }
 
   tags = {
