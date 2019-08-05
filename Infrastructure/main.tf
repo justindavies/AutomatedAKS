@@ -1,7 +1,3 @@
-variable "SP" {}
-variable "PASS" {}
-
-
 resource "azurerm_resource_group" "test" {
   name     = "acctestRG1"
   location = "East US"
@@ -30,8 +26,8 @@ resource "azurerm_kubernetes_cluster" "test" {
   }
 
   service_principal {
-    client_id     = ${var.SP}
-    client_secret = ${var.PASS}
+    client_id     = var.SP
+    client_secret = var.PASS
   }
 
   tags = {
