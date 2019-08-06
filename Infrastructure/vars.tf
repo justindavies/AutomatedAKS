@@ -1,6 +1,6 @@
-variable "SP" {
+variable "sp" {
       default = "foo"
 }
-variable "PASS" {
+variable "pass" {
       default = "foo"
 }
