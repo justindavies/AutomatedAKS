@@ -1,2 +1,6 @@
-variable "SP" {}
-variable "PASS" {}
+variable "SP" {
+      default = "foo"
+}
+variable "PASS" {
+      default = "foo"
+}
