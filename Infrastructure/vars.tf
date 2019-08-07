@@ -17,7 +17,7 @@ variable "LOCATION" {
 
 }
 
-variable "CLINETAPPID" {
+variable "CLIENTAPPID" {
   description = "The Client ID for the Service Principal to use for this Managed Kubernetes Cluster for RBAC"
   default = "foo"
 
