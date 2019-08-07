@@ -28,7 +28,7 @@ resource "azurerm_kubernetes_cluster" "example" {
     azure_active_directory {
       # NOTE: in a Production environment these should be different values
       # but for the purposes of this example, this should be sufficient
-      client_app_id = "${var.CLINETAPPID}"
+      client_app_id = "${var.CLIENTAPPID}"
       server_app_id     = "${var.SERVERAPPID}"
       server_app_secret = "${var.SERVERAPPSECRET}"
       tenant_id = "${var.TENANTID}"
