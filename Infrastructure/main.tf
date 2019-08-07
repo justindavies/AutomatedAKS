@@ -1,13 +1,13 @@
 resource "azurerm_resource_group" "example" {
-  name     = "${var.prefix}-rbac-resources"
-  location = "${var.location}"
+  name     = "${var.PREFIX}-rbac-resources"
+  location = "${var.LOCATION}"
 }
 
 resource "azurerm_kubernetes_cluster" "example" {
-  name                = "${var.prefix}-rbac"
+  name                = "${var.PREFIX}-rbac"
   location            = "${azurerm_resource_group.example.location}"
   resource_group_name = "${azurerm_resource_group.example.name}"
-  dns_prefix          = "${var.prefix}-rbac"
+  dns_prefix          = "${var.PREFIX}-rbac"
 
   agent_pool_profile {
     name            = "default"
@@ -28,10 +28,10 @@ resource "azurerm_kubernetes_cluster" "example" {
     azure_active_directory {
       # NOTE: in a Production environment these should be different values
       # but for the purposes of this example, this should be sufficient
-      client_app_id = "${var.client_app_id}"
-      server_app_id     = "${var.server_app_id}"
-      server_app_secret = "${var.server_app_secret}"
-      tenant_id = "${var.tenant_id}"
+      client_app_id = "${var.CLINETAPPID}"
+      server_app_id     = "${var.SERVERAPPID}"
+      server_app_secret = "${var.SERVERAPPSECRET}"
+      tenant_id = "${var.TENANTID}"
     }
   }
 

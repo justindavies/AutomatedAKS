@@ -5,35 +5,35 @@ variable "PASS" {
       default = "foo"
 }
 
-variable "prefix" {
+variable "PREFIX" {
   description = "A prefix used for all resources in this example"
   default = "test"
 
 }
 
-variable "location" {
+variable "LOCATION" {
   description = "The Azure Region in which all resources in this example should be provisioned"
   default = "eastus"
 
 }
 
-variable "client_app_id" {
+variable "CLINETAPPID" {
   description = "The Client ID for the Service Principal to use for this Managed Kubernetes Cluster for RBAC"
   default = "foo"
 
 }
 
-variable "server_app_id" {
+variable "SERVERAPPID" {
   description = "The Server ID for the Service Principal to use for this Managed Kubernetes Cluster for RBAC"
   default = "foo"
 }
 
-variable "server_app_secret" {
+variable "SERVERAPPSECRET" {
   description = "The Server Secret for the Service Principal to use for this Managed Kubernetes Cluster for RBAC"
   default = "foo"
 }
 
-variable "tenant_id" {
+variable "TENANTID" {
   description = "The Tenant to use for this Managed Kubernetes Cluster for RBAC"
   default = "foo"
 }
