@@ -1,3 +1,6 @@
+# AAD integrated AKS cluster 
+
+
 resource "azurerm_resource_group" "example" {
   name     = "${var.PREFIX}-rbac-resources"
   location = "${var.LOCATION}"
